@@ -1,6 +1,12 @@
 package no.hiof.oleedvao.oblig4;
 
 import io.javalin.Javalin;
+import io.javalin.http.Context;
+import io.javalin.http.Handler;
+import io.javalin.vue.VueComponent;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 
 public class Application {
 
@@ -11,6 +17,10 @@ public class Application {
             JavalinConfig.vue.vueInstanceNameInJs = "app";
         }).start();
 
+        app.get("/", new VueComponent("home-page"));
+
+
     }
+
 
 }
