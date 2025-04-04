@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class TVSeriesDataRepository implements TVSeriesRepository {
 
-    private ArrayList<TVSeries> allTvSeries = new ArrayList<>();
+    protected ArrayList<TVSeries> allTvSeries = new ArrayList<>();
 
     public TVSeriesDataRepository() {
 
@@ -57,5 +57,10 @@ public class TVSeriesDataRepository implements TVSeriesRepository {
     @Override
     public void addListOfTVSeries(ArrayList<TVSeries> listOfTVSeries) {
 
+    }
+
+    @Override
+    public void addTVSeries(TVSeries tvSeries) {
+        allTvSeries.add(tvSeries);
     }
 }
